@@ -42,4 +42,9 @@ public class AttributeServiceImpl implements AttributeService {
     public void deleteAttribute(Integer id) {
         attributeDao.deleteAttribute(id);
     }
+
+    @Override
+    public Attribute queryAttributeById(Integer id) {
+        return attributeDao.queryAttributeById(id);
+    }
 }

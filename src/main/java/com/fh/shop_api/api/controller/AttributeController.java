@@ -68,5 +68,13 @@ public class AttributeController {
         return map;
     }
 
+    @GetMapping("queryAttributeById")
+    public Map queryAttributeById(Integer id){
+        Map map = new HashMap();
+        Attribute a = attributeService.queryAttributeById(id);
+        map.put("data",a);
+        return map;
+    }
+
 
 }

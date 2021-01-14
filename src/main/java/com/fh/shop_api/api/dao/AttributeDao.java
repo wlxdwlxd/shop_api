@@ -28,4 +28,7 @@ public interface AttributeDao {
 
     @Update(" update shop_attribute set isDel=1 where id=#{id}")
     void deleteAttribute(Integer id);
+
+    @Select(" select * from shop_attribute where id=#{id}")
+    Attribute queryAttributeById(Integer id);
 }
