@@ -47,4 +47,9 @@ public class AttributeServiceImpl implements AttributeService {
     public Attribute queryAttributeById(Integer id) {
         return attributeDao.queryAttributeById(id);
     }
+
+    @Override
+    public void updateAttributeById(Attribute attribute) {
+        attributeDao.updateAttributeById(attribute);
+    }
 }

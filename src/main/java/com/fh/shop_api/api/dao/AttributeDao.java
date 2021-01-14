@@ -31,4 +31,9 @@ public interface AttributeDao {
 
     @Select(" select * from shop_attribute where id=#{id}")
     Attribute queryAttributeById(Integer id);
+
+    @Update("update shop_attribute set name=#{name},nameCH=#{nameCH},typeId=#{typeId}" +
+            ",type=#{type},isSKU=#{isSKU},isDel=#{isDel},createDate=now()," +
+            " updateDate=now(),author='wlxd' where id=#{id}")
+    void updateAttributeById(Attribute attribute);
 }

@@ -76,5 +76,14 @@ public class AttributeController {
         return map;
     }
 
+    @PostMapping("updateAttributeById")
+    public Map updateAttributeById(Attribute attribute){
+        Map map = new HashMap();
+        attributeService.updateAttributeById(attribute);
+        map.put("code",200);
+        map.put("message","成功");
+        return map;
+    }
+
 
 }

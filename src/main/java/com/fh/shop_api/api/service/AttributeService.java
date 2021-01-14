@@ -16,4 +16,6 @@ public interface AttributeService {
     void deleteAttribute(Integer id);
 
     Attribute queryAttributeById(Integer id);
+
+    void updateAttributeById(Attribute attribute);
 }
