@@ -59,5 +59,14 @@ public class AttributeController {
         return map;
     }
 
+    @GetMapping("deleteAttribute")
+    public Map deleteAttribute(Integer id){
+        Map map = new HashMap();
+        attributeService.deleteAttribute(id);
+        map.put("code",200);
+        map.put("message","成功");
+        return map;
+    }
+
 
 }
