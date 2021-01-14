@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fh.shop_api.api.dao.TypeDao">
+    <insert id="add" parameterType="com.fh.shop_api.api.model.po.Type"
+    useGeneratedKeys="true"
+    keyColumn="id"
+    keyProperty="id">
+       insert  into shop_type (pid,name,createDate,updateDate,isDel) values (#{pid},#{name},now(),now(),0)
+    </insert>
+</mapper>
