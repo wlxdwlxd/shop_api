@@ -23,7 +23,7 @@ public class UploadFileController {
     @RequestMapping("photo")
     @ResponseBody
     public Map<String,Object> photo(@RequestParam("file") MultipartFile photo, HttpServletRequest request){
-        //System.out.println(photo.getOriginalFilename());i
+        //System.out.println(photo.getOriginalFilename());
         //先给图片重命名
         Long timeMills=System.currentTimeMillis();//获取当前时间的时间戳
         String oldFileName=photo.getOriginalFilename();//获取图片原名称
