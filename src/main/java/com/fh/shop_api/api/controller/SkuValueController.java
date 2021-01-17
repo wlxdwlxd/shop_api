@@ -45,4 +45,13 @@ public class SkuValueController {
         map.put("message","删除成功");
         return map;
     }
+
+    @PostMapping("updateSku")
+    public Map updateSku(SkuValue skuValue){
+        Map map = new HashMap();
+        skuValueService.updateSku(skuValue);
+        map.put("code",200);
+        map.put("message","修改成功");
+        return map;
+    }
 }

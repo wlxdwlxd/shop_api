@@ -1,10 +1,7 @@
 package com.fh.shop_api.api.dao;
 
 import com.fh.shop_api.api.model.po.SkuValue;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -20,4 +17,7 @@ public interface SkuValueDao {
 
     @Delete(" delete from shop_attribute_value where id=#{skuId}")
     void deleteSku(Integer skuId);
+
+    @Update(" update shop_attribute_value set name=#{name},nameCH=#{nameCH},attrId=#{attrId} where id=#{id}")
+    void updateSku(SkuValue skuValue);
 }

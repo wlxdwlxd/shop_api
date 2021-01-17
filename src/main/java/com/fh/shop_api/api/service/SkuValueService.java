@@ -10,4 +10,6 @@ public interface SkuValueService {
     void addSkuValue(SkuValue skuValue);
 
     void deleteSku(Integer skuId);
+
+    void updateSku(SkuValue skuValue);
 }
