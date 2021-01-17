@@ -18,4 +18,9 @@ public class SkuValueServiceImpl implements SkuValueService {
     public List<SkuValue> querySkuValue(Integer skuId) {
         return skuValueDao.querySkuValue(skuId);
     }
+
+    @Override
+    public void addSkuValue(SkuValue skuValue) {
+        skuValueDao.addSkuValue(skuValue);
+    }
 }

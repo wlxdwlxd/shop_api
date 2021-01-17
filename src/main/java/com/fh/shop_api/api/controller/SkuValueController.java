@@ -3,10 +3,7 @@ package com.fh.shop_api.api.controller;
 
 import com.fh.shop_api.api.model.po.SkuValue;
 import com.fh.shop_api.api.service.SkuValueService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -28,6 +25,15 @@ public class SkuValueController {
         map.put("code",200);
         map.put("message","查询成功");
         map.put("data",list);
+        return map;
+    }
+
+    @PostMapping("addSkuValue")
+    public Map addSkuValue(SkuValue skuValue){
+        Map map = new HashMap();
+        skuValueService.addSkuValue(skuValue);
+        map.put("code",200);
+        map.put("message","新增成功");
         return map;
     }
 }

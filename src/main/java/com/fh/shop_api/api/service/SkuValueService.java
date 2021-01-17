@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface SkuValueService {
     List<SkuValue> querySkuValue(Integer skuId);
+
+    void addSkuValue(SkuValue skuValue);
 }
