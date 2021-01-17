@@ -23,4 +23,9 @@ public class SkuValueServiceImpl implements SkuValueService {
     public void addSkuValue(SkuValue skuValue) {
         skuValueDao.addSkuValue(skuValue);
     }
+
+    @Override
+    public void deleteSku(Integer skuId) {
+        skuValueDao.deleteSku(skuId);
+    }
 }

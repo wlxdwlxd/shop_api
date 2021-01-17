@@ -8,4 +8,6 @@ public interface SkuValueService {
     List<SkuValue> querySkuValue(Integer skuId);
 
     void addSkuValue(SkuValue skuValue);
+
+    void deleteSku(Integer skuId);
 }

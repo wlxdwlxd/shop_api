@@ -36,4 +36,13 @@ public class SkuValueController {
         map.put("message","新增成功");
         return map;
     }
+
+    @GetMapping("deleteSku")
+    public Map deleteSku(Integer skuId){
+        Map map = new HashMap();
+        skuValueService.deleteSku(skuId);
+        map.put("code",200);
+        map.put("message","删除成功");
+        return map;
+    }
 }
