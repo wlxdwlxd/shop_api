@@ -9,13 +9,13 @@ import java.util.List;
 public interface SkuValueDao {
 
 
-    @Select(" select * from shop_attribute_value where attrId=#{skuId}")
+    @Select(" select * from shop_attribute_value where 1=1 and attrId=#{skuId} and isDel=0")
     List<SkuValue> querySkuValue(Integer skuId);
 
     @Insert(" insert into shop_attribute_value (name,nameCH,attrId) values(#{name},#{nameCH},#{attrId})")
     void addSkuValue(SkuValue skuValue);
 
-    @Delete(" delete from shop_attribute_value where id=#{skuId}")
+    @Delete(" update  shop_attribute_value set isDel=1 where id=#{skuId}")
     void deleteSku(Integer skuId);
 
     @Update(" update shop_attribute_value set name=#{name},nameCH=#{nameCH},attrId=#{attrId} where id=#{id}")
