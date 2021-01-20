@@ -52,4 +52,9 @@ public class AttributeServiceImpl implements AttributeService {
     public void updateAttributeById(Attribute attribute) {
         attributeDao.updateAttributeById(attribute);
     }
+
+    @Override
+    public List<Attribute> queryDataByTypeId(Integer typeId) {
+        return attributeDao.queryDataByTypeId(typeId);
+    }
 }

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -36,6 +37,16 @@ public class BrandController {
         map.put("code",200);
         map.put("message","成功");
         map.put("data",m);
+        return map;
+    }
+
+    @GetMapping("queryBrand")
+    public Map queryBrand(){
+        Map map = new HashMap();
+        List<Brand> list = brandService.queryBrand();
+        map.put("code",200);
+        map.put("message","成功");
+        map.put("data",list);
         return map;
     }
 

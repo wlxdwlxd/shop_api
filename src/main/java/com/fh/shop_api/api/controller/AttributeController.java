@@ -86,4 +86,13 @@ public class AttributeController {
     }
 
 
+    @GetMapping("queryDataByTypeId")
+    public Map queryDataByTypeId(Integer typeId){
+        Map map = new HashMap();
+        List<Attribute> list = attributeService.queryDataByTypeId(typeId);
+        map.put("code",200);
+        map.put("message","成功");
+        map.put("data",list);
+        return map;
+    }
 }

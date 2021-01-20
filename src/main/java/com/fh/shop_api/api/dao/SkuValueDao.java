@@ -20,4 +20,7 @@ public interface SkuValueDao {
 
     @Update(" update shop_attribute_value set name=#{name},nameCH=#{nameCH},attrId=#{attrId},isDel=0 where id=#{id}")
     void updateSku(SkuValue skuValue);
+
+    @Select("select * from shop_attribute_value where attrId=#{aId} and isDel=0")
+    List<SkuValue> queryDataByAid(Integer aId);
 }

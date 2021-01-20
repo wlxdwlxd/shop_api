@@ -46,4 +46,9 @@ public class BrandServiceImpl implements BrandService {
     public void updateBrand(Brand brand) {
         brandDao.updateBrand(brand);
     }
+
+    @Override
+    public List<Brand> queryBrand() {
+        return brandDao.queryBrand();
+    }
 }

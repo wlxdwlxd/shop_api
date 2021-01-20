@@ -54,4 +54,14 @@ public class SkuValueController {
         map.put("message","修改成功");
         return map;
     }
+
+    @GetMapping("queryDataByAid")
+    public Map queryDataByAid (Integer aId){
+        Map map = new HashMap();
+        List<SkuValue> list = skuValueService.queryDataByAid(aId);
+        map.put("code",200);
+        map.put("message","成功");
+        map.put("data",list);
+        return map;
+    }
 }

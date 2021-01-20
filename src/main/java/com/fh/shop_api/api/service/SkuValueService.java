@@ -12,4 +12,6 @@ public interface SkuValueService {
     void deleteSku(Integer skuId);
 
     void updateSku(SkuValue skuValue);
+
+    List<SkuValue> queryDataByAid(Integer aId);
 }

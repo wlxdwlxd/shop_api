@@ -33,4 +33,9 @@ public class SkuValueServiceImpl implements SkuValueService {
     public void updateSku(SkuValue skuValue) {
         skuValueDao.updateSku(skuValue);
     }
+
+    @Override
+    public List<SkuValue> queryDataByAid(Integer aId) {
+        return skuValueDao.queryDataByAid(aId);
+    }
 }

@@ -36,4 +36,7 @@ public interface BrandDao {
             ",bandDesc=#{bandDesc},ord=#{ord},isDel=#{isDel},createDate=now()," +
             " updateDate=now(),author='wlxd' where id=#{id}")
     void updateBrand(Brand brand);
+
+    @Select(" select * from shop_brand where 1=1  and isDel=0")
+    List<Brand> queryBrand();
 }

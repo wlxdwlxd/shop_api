@@ -3,6 +3,7 @@ package com.fh.shop_api.api.service;
 import com.fh.shop_api.api.model.po.Brand;
 import com.fh.shop_api.api.model.vo.BrandVo;
 
+import java.util.List;
 import java.util.Map;
 
 public interface BrandService {
@@ -15,4 +16,6 @@ public interface BrandService {
     Brand queryBrandById(Integer id);
 
     void updateBrand(Brand brand);
+
+    List<Brand> queryBrand();
 }

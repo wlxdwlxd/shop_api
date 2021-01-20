@@ -36,4 +36,7 @@ public interface AttributeDao {
             ",type=#{type},isSKU=#{isSKU},isDel=#{isDel},createDate=now()," +
             " updateDate=now(),author='wlxd' where id=#{id}")
     void updateAttributeById(Attribute attribute);
+
+    @Select("select * from shop_attribute where 1=1 and isDel=0 and typeId=#{typeId}")
+    List<Attribute> queryDataByTypeId(Integer typeId);
 }

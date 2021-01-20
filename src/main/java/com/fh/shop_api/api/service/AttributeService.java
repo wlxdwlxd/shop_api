@@ -18,4 +18,6 @@ public interface AttributeService {
     Attribute queryAttributeById(Integer id);
 
     void updateAttributeById(Attribute attribute);
+
+    List<Attribute> queryDataByTypeId(Integer typeId);
 }
