@@ -6,6 +6,7 @@ public class ShopVo {
 
     private Integer size;
 
+
     public Integer getStart() {
         return start;
     }

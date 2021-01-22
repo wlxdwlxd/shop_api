@@ -18,9 +18,9 @@ public class ShopController {
     private ShopService shopService;
 
     @PostMapping("addShop")
-    public Map addShop(Shop shop){
+    public Map addShop(Shop shop,String attr,String sku){
         Map map = new HashMap();
-        shopService.addShop(shop);
+        shopService.addShop(shop,attr,sku);
         map.put("code",200);
         map.put("message","成功");
         return map;
@@ -43,6 +43,32 @@ public class ShopController {
         map.put("code",200);
         map.put("message","成功");
         map.put("data",m);
+        return map;
+    }
+
+    @GetMapping("deleteShop")
+    public Map deleteShop(Integer id){
+        Map map = new HashMap();
+        shopService.deleteShop(id);
+        map.put("code",200);
+        map.put("message","成功");
+        return map;
+    }
+
+    @PostMapping("updateShop")
+    public Map updateShop(Shop shop){
+        Map map = new HashMap();
+        shopService.updateShop(shop);
+        map.put("code",200);
+        map.put("message","成功");
+        return map;
+    }
+
+    @GetMapping("queryShopById")
+    public Map queryShopById(Integer id){
+        Map map = new HashMap();
+        Shop shop = shopService.queryShopById(id);
+        map.put("data",shop);
         return map;
     }
 
